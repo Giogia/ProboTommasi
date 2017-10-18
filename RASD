@@ -1,67 +1,7 @@
-1. INTRODUCTION
-A. Purpose: here we include the goals of the project  
-
-B. Scope: here we include an analysis of the world and of the shared phenomena 
-
-C. Definitions, Acronyms, Abbreviations 
-(glossary)
-
-D. Revision history
-
-E. Reference Documents
-(quali documenti sono stati utilizzati)
-
-F. Document Structure
-
-2. OVERALL DESCRIPTION
-
-A. Product perspective: here we include further details on the shared phenomena and a
-domain model (class diagrams and statecharts)
-(proposed system)
-
-B. Product functions: here we include the most important requirements
 
 
-C. User characteristics: here we include anything that is relevant to clarify their needs
-(actors identifying)
 
-D. Assumptions, dependencies and constraints: here we include domain assumptions
 
-3. SPECIFIC REQUIREMENTS: Here we include more details on all aspects in Section 2 if they can
-be useful for the development team.
-
-A. External Interface Requirements (non functional requirements)
-A.1 User Interfaces
-A.2 Hardware Interfaces
-A.3 Software Interfaces
-A.4 Communication Interfaces
-
-B. Functional Requirements: Definition of use case diagrams, use cases and associated
-sequence/activity diagrams, and mapping on requirements
-
-C. Performance Requirements (non functional requirements )
-
-D. Design Constraints (constraints)
-D.1 Standards compliance
-D.2 Hardware limitations
-D.3 Any other constraint
-
-E. Software System Attributes
-E.1 Reliability
-E.2 Availability
-E.3 Security
-E.4 Maintainability
-E.5 Portability
-
-4. FORMAL ANALYSIS USING ALLOY: in this section you will include your Alloy model. We require
-you to comment on the model by discussing the purpose of the model, what you can prove
-with it and why what you prove is important given the problem at hand. You are also
-required to show one or more worlds obtained by running your model.
-
-5. EFFORT SPENT: In this section you will include information about the number of hours each
-group member has worked for this document.
-
-6. REFERENCES
 
 
 
@@ -93,7 +33,7 @@ group member has worked for this document.
 
 Travlendar+ is a calendar-based application that automatically computes and accounts for travel time between appointments to make sure that the user is able to go to all of them without being late.
 The application suggests travel means, taking in account appointment specifications and other variables based upon a specific day, as weather forecast.
-Travlendar+ allows users to define various kinds of preferences, like choosing which travel mean use or setting constraints on distance, departure time or carbon footprints emissions.
+Travlendar+ allows users to define various kinds of preferences, like choosing which travel mean use or setting constraints on distance, departure time or carbon footprints emission
 
 
 
@@ -108,7 +48,6 @@ Set daily preferences
 Create, update or delete meetings
 Choose traveling means
 Choose flexible lunch duration
-
 System will be able to:
 Sort by date meetings
 Show best mobility options and departure details
