@@ -1,0 +1,318 @@
+1. INTRODUCTION
+A. Purpose: here we include the goals of the project  
+
+B. Scope: here we include an analysis of the world and of the shared phenomena 
+
+C. Definitions, Acronyms, Abbreviations 
+(glossary)
+
+D. Revision history
+
+E. Reference Documents
+(quali documenti sono stati utilizzati)
+
+F. Document Structure
+
+2. OVERALL DESCRIPTION
+
+A. Product perspective: here we include further details on the shared phenomena and a
+domain model (class diagrams and statecharts)
+(proposed system)
+
+B. Product functions: here we include the most important requirements
+
+
+C. User characteristics: here we include anything that is relevant to clarify their needs
+(actors identifying)
+
+D. Assumptions, dependencies and constraints: here we include domain assumptions
+
+3. SPECIFIC REQUIREMENTS: Here we include more details on all aspects in Section 2 if they can
+be useful for the development team.
+
+A. External Interface Requirements (non functional requirements)
+A.1 User Interfaces
+A.2 Hardware Interfaces
+A.3 Software Interfaces
+A.4 Communication Interfaces
+
+B. Functional Requirements: Definition of use case diagrams, use cases and associated
+sequence/activity diagrams, and mapping on requirements
+
+C. Performance Requirements (non functional requirements )
+
+D. Design Constraints (constraints)
+D.1 Standards compliance
+D.2 Hardware limitations
+D.3 Any other constraint
+
+E. Software System Attributes
+E.1 Reliability
+E.2 Availability
+E.3 Security
+E.4 Maintainability
+E.5 Portability
+
+4. FORMAL ANALYSIS USING ALLOY: in this section you will include your Alloy model. We require
+you to comment on the model by discussing the purpose of the model, what you can prove
+with it and why what you prove is important given the problem at hand. You are also
+required to show one or more worlds obtained by running your model.
+
+5. EFFORT SPENT: In this section you will include information about the number of hours each
+group member has worked for this document.
+
+6. REFERENCES
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1.INTRODUCTION
+
+1.A - PURPOSE
+
+Travlendar+ is a calendar-based application that automatically computes and accounts for travel time between appointments to make sure that the user is able to go to all of them without being late.
+The application suggests travel means, taking in account appointment specifications and other variables based upon a specific day, as weather forecast.
+Travlendar+ allows users to define various kinds of preferences, like choosing which travel mean use or setting constraints on distance, departure time or carbon footprints emissions.
+
+
+
+1.B - SCOPE
+
+Travlendar+'s aim is to provide some functionalities which should help users organizing meetings during the day.
+Users will be able to:
+Log into the system
+Sign up into the system
+Set or update personal informations and default preferences
+Set daily preferences
+Create, update or delete meetings
+Choose traveling means
+Choose flexible lunch duration
+
+System will be able to:
+Sort by date meetings
+Show best mobility options and departure details
+Buy transportation tickets
+Locate nearest bike from a bike-sharing service
+Warn the user whenever a meeting in unreachable location or with impossible time conditions is created
+Notificate user to get prepared for the journey, few minutes before departure time
+Warn the user whenever there is a delay in the schedule and, if possible, suggest an alternative option to reach next meeting in time
+Suggest user with alternative traveling means if necessary (i.e. public transportation strike, rainy day, bus’ delay, etc.)
+Warn user whenever a new meeting does not allow user to have lunch in designated time window
+
+
+1.C - DEFINITIONS, ACRONYMS, ABBREVIATIONS
+
+To avoid misunderstanding and ambiguity, the following definitions and acronyms here listed represent the meaning that the developers as-sociated to these common words in the context of the project:
+
+Meeting
+User
+Calendar
+Weather forecast
+Daily preferences
+Default preferences
+Default settings
+Visitor
+RASD
+OS
+Registration
+DAT (departure advance time)
+Username and Password
+
+1.D - REVISION HISTORY
+
+1.E - REFERENCE DOCUMENT
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2. OVERALL DESCRIPTION
+
+2.A - PRODUCT PERSPECTIVES
+
+Travlendar+ will be a mobile application built for the most common OS, available only from Android 4.2.2 or IOS 8 and further versions. 
+interfaccia+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+The application will be based on an internal calendar service, programmed in Java.
+On the contrary, Map service and Weather Forecast data will be retrieved from external web sources (Google Maps, Weather.com).
+
+
+
+
+
+2.B - PRODUCT FUNCTIONS
+
+Ways to interact with the system:
+In the first page the user will be able to log in and sign up to the service.
+During registration users will set default preferences.
+Through the “Meetings” menu users will create, update and delete meetings.
+During meeting creation users will provide time and location information.
+In “Settings” menu users will find “Lunch break” options to set the interval of time for a lunch break.
+In the main page users will find “Change daily settings” button to set daily preferences
+
+System functionalities:
+The application will take in account preferences to create best route options.
+In the main page the system will show next meetings and best route options for each travel.
+Clicking on a meeting the application will display secondary route options, a small map and a section for buying tickets or booking a bike.
+The application will show a push notification for departure according to DAT.
+The system will create a push notification to warn about transports delays, strikes and the impossibility to reach the location in time.
+
+
+
+
+
+
+
+
+
+
+2.C - USER CHARACTERISTICS
+
+For the application we identified some typologies of actors:
+
+Final users : people who wishes to plan all of his/her meetings , have signed up in the system, have a smartphone with GPS and internet connection
+and live in Lombardy.
+
+Google Maps 
+provider of maps and route options
+
+Weather.com
+provider of weather forecast
+
+
+
+
+
+
+
+2.D - DOMAIN ASSUMPTIONS
+
+The following hypothesis involve some ambiguous aspect of the specification.
+In order to avoid subjectivity we will assume those facts to be always true.
+
+Users will attend all created meetings 
+Users create meetings in existing locations 
+It’s always possible to buy ticket of public transports
+Users’ devices have gps on and internet connection
+Maps are always updated
+Transport timetables are available online 
+Strikes or delays are always known in advance
+Meetings take place in locations for which It’s possible to retrieve weather forecast
+Weather forecasts are always reliable and identifiable with the use of categories
+
+
+
+aggiungerei  qualcosa
+
+
+
+
+
+
+
+
+3. SPECIFIC REQUIREMENTS
+
+3.A.1 USER INTERFACES
+
+Travlendar+ is designed to be used as a mobile application due to its need to be a portable service. 
+The following mock-ups show how the user will be able to interact with the application.
+
+LOG IN and SIGN UP 
+This is the first page that will be displayed by the user. Here it is possible to log into the system by inserting credentials, or to sign up and provide e-mail, Username and Password.
+
+++++++++++++++MOCK UP+++++++++++++++++++
+
+
+
+DEFAULT PREFERENCES
+When a new user sign up to Travlendar+, he/she should be able to set the his/her default preferences or accept the recommended ones.
+This page can also be reached using ≡ button whenever the user desires to change one of the preferences.
+
+++++++++++++++MOCK UP+++++++++++++++++++
+
+
+
+MAIN PAGE
+This page will be shown once logged in. It contains all the incoming meetings and each best route option. The first incoming meeting will show a secondary route option and the lunch break will appear if set.
+Clicking on a meeting “Suggested routes” page will be opened.
+On the bottom of the page “Change daily settings” button will redirect the user to Daily Settings page.
+On the top right ≡ button will let the user moving through the pages (Main, Meetings, Settings).
+
+
+++++++++++++++MOCK UP+++++++++++++++++++
+
+
+DAILY SETTINGS 
+This page is quite similar to Default Preferences page. In this page user could modify the preferences for the current day because of unexpected events (i.e. broken car, no money to buy transport tickets etc.).
+
+
+++++++++++++++MOCK UP+++++++++++++++++++
+
+
+
+MEETINGS
+Meetings page shows a weekly calendar with all the created meetings and some details.
+On the bottom three button could let the user to create, modify or delete meetings.
+Clicking on a meeting “Suggested routes” page will be shown.
+Using “Create” or “Modify” buttons user will be redirected to “Meeting details” page.
+
+++++++++++++++MOCK UP+++++++++++++++++++
+
+
+MEETING DETAILS
+It contains the name of the meeting, the location, time and further information about the event. Using this page it is possible to create or modify meetings.
+
+++++++++++++++MOCK UP+++++++++++++++++++
+
+
+
+SUGGESTED ROUTES
+This page shows all the possible travel means that user can use to reach the location with all the details.
+It is also possible to buy transports tickets or to book a bike.
+
+++++++++++++++MOCK UP+++++++++++++++++++
+
+
+
+3.A.2 HARDWARE INTERFACES
+
+
+3.A.3 SOFTWARE INTERFACES
+
+
+3.A.4 COMMUNICATION INTERFACES
